@@ -41,10 +41,11 @@ export class AppComponent {
 
   addUser() {
     if (this.firstName !== '') {
-      const differnce = ((this.nowDate - new Date(this.users[this.users.length - 1].dateOfBirth).getTime()) /
-        (1000 * 60 * 60 * 24 * 365)).toFixed(0);
+      const differnce = Math.ceil((this.nowDate - new Date(this.users[this.users.length - 1].dateOfBirth).getTime()) /
+        (1000 * 60 * 60 * 24 * 365));
       console.log(differnce);
       console.log('This date: ' + this.nowDate);
+      console.log('Birthday day: ' + differnce);
       this.users.push(new User(this.firstName , this.lastName, this.dateOfBirth, this.willBecome));
       //  console.log(new Date() - this.users[this.users.length - 1].dateOfBirth);
     }
