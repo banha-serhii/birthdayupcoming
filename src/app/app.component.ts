@@ -45,7 +45,7 @@ export class AppComponent {
         (1000 * 60 * 60 * 24 * 365)).toFixed(0);
       console.log(differnce);
       console.log('This date: ' + this.nowDate);
-      this.users.push(new User(this.firstName, this.lastName, this.dateOfBirth, this.willBecome));
+      this.users.push(new User(this.firstName , this.lastName, this.dateOfBirth, this.willBecome));
       //  console.log(new Date() - this.users[this.users.length - 1].dateOfBirth);
     }
   }
